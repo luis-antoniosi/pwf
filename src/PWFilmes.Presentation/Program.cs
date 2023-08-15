@@ -12,6 +12,7 @@ namespace PWFilmes.Presentation
 {
     public class Program
     {
+        //Testea
         public static async Task Main(string[] args)
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
