@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\Etec\Desktop\PWFilmes\src\PWFilmes.Presentation\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\Etec\Desktop\PWFilmes\src\PWFilmes.Presentation\obj\Debug\net5.0\scopedcss\bundle\" />
+</StaticWebAssets>
