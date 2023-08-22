@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PWFilmes\\src\\PWFilmes.Presentation\\PWFilmes.Presentation.csproj": {}
+    "C:\\PW\\PWFilmes\\src\\PWFilmes.Presentation\\PWFilmes.Presentation.csproj": {}
   },
   "projects": {
-    "C:\\PWFilmes\\src\\PWFilmes.Presentation\\PWFilmes.Presentation.csproj": {
+    "C:\\PW\\PWFilmes\\src\\PWFilmes.Presentation\\PWFilmes.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PWFilmes\\src\\PWFilmes.Presentation\\PWFilmes.Presentation.csproj",
+        "projectUniqueName": "C:\\PW\\PWFilmes\\src\\PWFilmes.Presentation\\PWFilmes.Presentation.csproj",
         "projectName": "PWFilmes.Presentation",
-        "projectPath": "C:\\PWFilmes\\src\\PWFilmes.Presentation\\PWFilmes.Presentation.csproj",
+        "projectPath": "C:\\PW\\PWFilmes\\src\\PWFilmes.Presentation\\PWFilmes.Presentation.csproj",
         "packagesPath": "C:\\Users\\Etec\\.nuget\\packages\\",
-        "outputPath": "C:\\PWFilmes\\src\\PWFilmes.Presentation\\obj\\",
+        "outputPath": "C:\\PW\\PWFilmes\\src\\PWFilmes.Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
