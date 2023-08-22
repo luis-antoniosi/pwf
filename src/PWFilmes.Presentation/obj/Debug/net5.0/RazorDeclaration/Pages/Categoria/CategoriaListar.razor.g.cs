@@ -82,6 +82,13 @@ using PWFilmes.Presentation.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\PW\PWFilmes\src\PWFilmes.Presentation\_Imports.razor"
+using BlazorBootstrap;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/categoria/listar")]
     public partial class CategoriaListar : Microsoft.AspNetCore.Components.ComponentBase
     {

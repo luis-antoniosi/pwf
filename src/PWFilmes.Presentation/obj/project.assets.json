@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Blazor.Bootstrap/1.10.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Blazor.Bootstrap.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Bootstrap.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.17": {
         "type": "package",
         "dependencies": {
@@ -308,6 +317,15 @@
       }
     },
     "net5.0/browser-wasm": {
+      "Blazor.Bootstrap/1.10.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Blazor.Bootstrap.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor.Bootstrap.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.17": {
         "type": "package",
         "dependencies": {
@@ -615,6 +633,28 @@
     }
   },
   "libraries": {
+    "Blazor.Bootstrap/1.10.0": {
+      "sha512": "Hqc2tZBkiuYy/t8ht55ecoNR1Muk/nqFD1mOCag7qX/hd0nR1KXOD8i42c7UT9n5zAFTfvPltSQQYvzKdc1jKA==",
+      "type": "package",
+      "path": "blazor.bootstrap/1.10.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "128X128.png",
+        "README.md",
+        "blazor.bootstrap.1.10.0.nupkg.sha512",
+        "blazor.bootstrap.nuspec",
+        "build/Blazor.Bootstrap.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazor.Bootstrap.props",
+        "buildTransitive/Blazor.Bootstrap.props",
+        "lib/net6.0/BlazorBootstrap.dll",
+        "staticwebassets/Blazor.Bootstrap.bundle.scp.css",
+        "staticwebassets/blazor.bootstrap.css",
+        "staticwebassets/blazor.bootstrap.js",
+        "staticwebassets/icon/128X128.png"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/5.0.17": {
       "sha512": "20Zo2tas/pHLHRe1iEWbtVJTKP8wuF8o5LmOa7U/8jJW6xUSclGOJgskTTkYX8UUSqkeNhNifNMKDI0i0+/GdA==",
       "type": "package",
@@ -1139,6 +1179,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Blazor.Bootstrap >= 1.10.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 5.0.17",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 5.0.17",
       "System.Net.Http.Json >= 5.0.0"
@@ -1190,6 +1231,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Blazor.Bootstrap": {
+            "target": "Package",
+            "version": "[1.10.0, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[5.0.17, )"
