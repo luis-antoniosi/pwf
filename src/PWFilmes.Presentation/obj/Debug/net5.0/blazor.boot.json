@@ -29,7 +29,9 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-f2PgoftqEkKRuuiAk6S1MHygOuqZBHzB0HOB3vR93TU=",
       "Microsoft.JSInterop.dll": "sha256-pr6L2mjcqc8D0q4a8E717JbHBm5iEM4PFAo1DBJmaUg=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-wm\/PyT01CAndytn\/B\/egrjENN3gkDMsMDaFon1TwCHA=",
+      "Radzen.Blazor.dll": "sha256-Vhi33q92fewv5wCbJQpicJqkkljrjH\/9evLYslsblc8=",
       "System.IO.Pipelines.dll": "sha256-\/C5xhI+m3Aqrcjxy\/TauLyqv\/\/5l8WEW3rXFtVlNhy8=",
+      "System.Linq.Dynamic.Core.dll": "sha256-BSiYQ0QRWUNtCTLPJF67ZlXPtdpYeWAyWnx61m0wtlQ=",
       "Microsoft.CSharp.dll": "sha256-PpkoBrb5GDDzBCVjEGJ15VkONpHLxk8ZZ3uc0eDYPaY=",
       "Microsoft.VisualBasic.Core.dll": "sha256-SyyaBBG5sBtJEfy89ATtHrxESu8\/SyNLYJXV1OaHYG0=",
       "Microsoft.VisualBasic.dll": "sha256-r72HitH7Jt\/VQ3irxjaX1qUbLsK06DZxmFGScnqWFcE=",
@@ -195,11 +197,11 @@
       "mscorlib.dll": "sha256-zMI\/dXK7DoZZ9Qm9U9\/jRN4iQ9Ss3w8\/rwQQxC6SW9Y=",
       "netstandard.dll": "sha256-W3q3PN+lpRB+tRJEIhtMgYOGFv0pauEeeCS9iIRkKAM=",
       "System.Private.CoreLib.dll": "sha256-9rUJv1mXEQdGt\/kWiJ1ITPPzp3cAi3lSmqHVTisp7w0=",
-      "PWFilmes.Presentation.dll": "sha256-ogANQzEFe7eY6aRBhP2C0k2GeTMxzZYmsZMSq2bq4Ug="
+      "PWFilmes.Presentation.dll": "sha256-oGCR2zBBDX2Freb+yi2PP5+HCbl77mfedyIxZvdQsw4="
     },
     "lazyAssembly": null,
     "pdb": {
-      "PWFilmes.Presentation.pdb": "sha256-QtOJ5SYHkzPPxNIuuwqgJe\/2S5jw4TGRwLqaLgZ13nc="
+      "PWFilmes.Presentation.pdb": "sha256-FbOtWOUBdkNjx6MLULtY53yr4ZvA12uOiMo8ls5mWFM="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-8oJip361m8OrfLRJOuIeswWKaoxtT27\/wINCxhn+s4c=",

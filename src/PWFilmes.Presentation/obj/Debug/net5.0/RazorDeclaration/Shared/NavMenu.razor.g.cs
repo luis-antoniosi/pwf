@@ -84,7 +84,14 @@ using PWFilmes.Presentation.Shared;
 #nullable disable
 #nullable restore
 #line 11 "C:\PW\PWFilmes\src\PWFilmes.Presentation\_Imports.razor"
-using BlazorBootstrap;
+using Radzen;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "C:\PW\PWFilmes\src\PWFilmes.Presentation\_Imports.razor"
+using Radzen.Blazor;
 
 #line default
 #line hidden
