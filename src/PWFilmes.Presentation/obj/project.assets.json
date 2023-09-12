@@ -341,6 +341,16 @@
         "runtime": {
           "lib/net5.0/System.Net.Http.Json.dll": {}
         }
+      },
+      "PWFilmes.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/PWFilmes.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PWFilmes.Domain.dll": {}
+        }
       }
     },
     "net5.0/browser-wasm": {
@@ -682,6 +692,16 @@
         },
         "runtime": {
           "lib/net5.0/System.Net.Http.Json.dll": {}
+        }
+      },
+      "PWFilmes.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/PWFilmes.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PWFilmes.Domain.dll": {}
         }
       }
     }
@@ -1351,12 +1371,18 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "PWFilmes.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../PWFilmes.Domain/PWFilmes.Domain.csproj",
+      "msbuildProject": "../../PWFilmes.Domain/PWFilmes.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.AspNetCore.Components.WebAssembly >= 5.0.17",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 5.0.17",
+      "PWFilmes.Domain >= 1.0.0",
       "Radzen.Blazor >= 4.15.10",
       "System.Net.Http.Json >= 5.0.0"
     ]
@@ -1394,7 +1420,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\PW\\PWFilmes\\PWFilmes.Domain\\PWFilmes.Domain.csproj": {
+              "projectPath": "C:\\PW\\PWFilmes\\PWFilmes.Domain\\PWFilmes.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,0 +1,55 @@
+﻿@page "/categoria/listar"
+@using PWFilmes.Domain
+
+<h3>CategoriaListar</h3>
+
+<RadzenDataGrid AllowFiltering="true"
+                AllowColumnResize="true"
+                AllowAlternatingRows="true"
+                FilterMode="FilterMode.Advanced"
+                AllowSorting="true"
+                PageSize="10"
+                AllowPaging="true"
+                PagerHorizontalAlign="HorizontalAlign.Left"
+                ShowPagingSummary="true"
+                Data="@categorias"
+                TItem="Categoria"
+                ColumnWidth="300px"
+                LogicalFilterOperator="LogicalFilterOperator.Or"
+                GridLines="DataGridGridLines.Both">
+    <Columns>
+        <RadzenDataGridColumn TItem="Categoria" Property="Codigo" Title="Código" Width="100px" />
+        <RadzenDataGridColumn TItem="Categoria" Property="Descricao" Title="Descrição" />
+        <RadzenDataGridColumn TItem="Categoria" Property="Cor" Title="Cor" Width="80px"/>
+    </Columns>
+</RadzenDataGrid>
+
+
+@code {
+    List<Categoria> categorias = new List<Categoria>();
+
+    protected override void OnInitialized()
+    {
+        categorias.Add(
+            new Categoria
+            {
+                Codigo = 1,
+                Descricao = "Terror",
+                Cor = "Vermelho"
+            });
+
+        categorias.Add(
+            new Categoria
+            {
+                Codigo = 2,
+                Descricao = "Comédia",
+                Cor = "Azul"
+            });
+
+
+        base.OnInitialized();
+    }
+
+
+
+}
