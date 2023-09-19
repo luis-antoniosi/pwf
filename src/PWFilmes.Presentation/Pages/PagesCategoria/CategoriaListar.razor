@@ -28,28 +28,9 @@
 @code {
     List<Categoria> categorias = new List<Categoria>();
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        categorias.Add(
-            new Categoria
-            {
-                Codigo = 1,
-                Descricao = "Terror",
-                Cor = "Vermelho"
-            });
-
-        categorias.Add(
-            new Categoria
-            {
-                Codigo = 2,
-                Descricao = "Comédia",
-                Cor = "Azul"
-            });
-
-
-        base.OnInitialized();
+        var response = await Http.GetAsync("");
+        return base.OnInitializedAsync();
     }
-
-
-
 }
