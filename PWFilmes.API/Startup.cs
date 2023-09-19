@@ -26,7 +26,7 @@ namespace PWFilmes.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddCors();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -43,6 +43,13 @@ namespace PWFilmes.API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PWFilmes.API v1"));
             }
+
+            //(Cross-Origin Resource Sharing - Compartilhamento de recursos com origens diferentes)
+            app.UseCors(cors => cors
+                .AllowAnyOrigin()
+                .AllowAnyMethod() // Get, Post, Put, Delete, etc...
+                .AllowAnyHeader());
+
 
             app.UseHttpsRedirection();
 

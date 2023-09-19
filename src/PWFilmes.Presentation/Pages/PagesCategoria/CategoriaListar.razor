@@ -1,5 +1,8 @@
 ﻿@page "/categoria/listar"
 @using PWFilmes.Domain
+@using System.Text.Json
+
+@inject HttpClient Http
 
 <h3>CategoriaListar</h3>
 
@@ -20,7 +23,7 @@
     <Columns>
         <RadzenDataGridColumn TItem="Categoria" Property="Codigo" Title="Código" Width="100px" />
         <RadzenDataGridColumn TItem="Categoria" Property="Descricao" Title="Descrição" />
-        <RadzenDataGridColumn TItem="Categoria" Property="Cor" Title="Cor" Width="80px"/>
+        <RadzenDataGridColumn TItem="Categoria" Property="Cor" Title="Cor" Width="80px" />
     </Columns>
 </RadzenDataGrid>
 
@@ -30,7 +33,12 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var response = await Http.GetAsync("");
-        return base.OnInitializedAsync();
+        var response = await Http.GetAsync("api/Categoria/listar");
+        var content = await response.Content.ReadAsStringAsync();
+        var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+
+        categorias = JsonSerializer.Deserialize<List<Categoria>>(content, options);
+
+        await base.OnInitializedAsync();
     }
 }
