@@ -2,11 +2,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using PWFilmes.API.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +28,17 @@ namespace PWFilmes.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<PWFilmesContext>(options =>
+            {
+                var connection = "server=localhost;" +
+                                 "port=3306;" +
+                                 "database=PWFilmes;" +
+                                 "uid=root"; //; password=senha_do_banco_de_dados
+
+                options.UseMySql(connection, 
+                    ServerVersion.AutoDetect(connection));
+            });
+
             services.AddCors();
             services.AddControllers();
             services.AddSwaggerGen(c =>
