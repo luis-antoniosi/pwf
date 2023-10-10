@@ -28,17 +28,7 @@ namespace PWFilmes.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<PWFilmesContext>(options =>
-            {
-                var connection = "server=localhost;" +
-                                 "port=3306;" +
-                                 "database=PWFilmes;" +
-                                 "uid=root"; //; password=senha_do_banco_de_dados
-
-                options.UseMySql(connection, 
-                    ServerVersion.AutoDetect(connection));
-            });
-
+            services.AddDbContext<PWFilmesContext>();
             services.AddCors();
             services.AddControllers();
             services.AddSwaggerGen(c =>
