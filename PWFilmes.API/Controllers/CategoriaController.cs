@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PWFilmes.Domain;
+using PWFilmes.API.Context;
 
 namespace PWFilmes.API.Controllers
 {
@@ -12,40 +13,21 @@ namespace PWFilmes.API.Controllers
     [ApiController]
     public class CategoriaController : ControllerBase
     {
+        PWFilmesContext _context;
+
+        public CategoriaController(PWFilmesContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet("listar")]
         public IActionResult Listar()
         {
-            List<Categoria> categorias = new List<Categoria>();
+            //List<Categoria> categorias =
+            //    _context.CategoriaSet.ToList();
+            //return Ok(categorias);
 
-            categorias.Add(new Categoria
-            {
-                Codigo = 1,
-                Descricao = "Terror",
-                Cor = "Vermelho"
-            });
-
-            categorias.Add(new Categoria
-            {
-                Codigo = 2,
-                Descricao = "Comédia",
-                Cor = "Azul"
-            });
-
-            categorias.Add(new Categoria
-            {
-                Codigo = 3,
-                Descricao = "Suspense",
-                Cor = "Amarelo"
-            });
-
-            categorias.Add(new Categoria
-            {
-                Codigo = 4,
-                Descricao = "Ação",
-                Cor = "Verde"
-            });
-
-            return Ok(categorias);
+            return Ok(_context.CategoriaSet.AsEnumerable());
         }
     }
 }
