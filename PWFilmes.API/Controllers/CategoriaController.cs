@@ -20,6 +20,12 @@ namespace PWFilmes.API.Controllers
             _context = context;
         }
 
+        [HttpGet("obter/{codigo}")]
+        public IActionResult Obter(int codigo)
+        {
+            return Ok(_context.CategoriaSet.Find(codigo));
+        }
+
         [HttpGet("listar")]
         public IActionResult Listar()
         {
@@ -28,6 +34,24 @@ namespace PWFilmes.API.Controllers
             //return Ok(categorias);
 
             return Ok(_context.CategoriaSet.AsEnumerable());
+        }
+
+        [HttpPost("adicionar")]
+        public IActionResult Adicionar(Categoria categoria)
+        {
+            _context.CategoriaSet.Add(categoria);
+            _context.SaveChanges();
+
+            return Created("Created", $"Categoria {categoria.Codigo} Adicionada com Sucesso.");
+        }
+
+        public IActionResult Atualizar(Categoria categoria)
+        {
+            if (_context.CategoriaSet.
+                Any(p => p.Codigo == categoria.Codigo))
+            {
+                _context.CategoriaSet.Attach(categoria);
+            }
         }
     }
 }
