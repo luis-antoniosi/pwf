@@ -45,13 +45,33 @@ namespace PWFilmes.API.Controllers
             return Created("Created", $"Categoria {categoria.Codigo} Adicionada com Sucesso.");
         }
 
+        [HttpPut("atualizar")]
         public IActionResult Atualizar(Categoria categoria)
         {
             if (_context.CategoriaSet.
                 Any(p => p.Codigo == categoria.Codigo))
             {
                 _context.CategoriaSet.Attach(categoria);
+                _context.CategoriaSet.Update(categoria);
+                _context.SaveChanges();
+
+                return Ok($"Categoria {categoria.Codigo} Atualizada com Sucesso.");
             }
+
+            return BadRequest($"Categoria {categoria.Codigo} não Localizada");
+        }
+
+        [HttpDelete("excluir/{codigo}")]
+        public IActionResult Excluir(int codigo)
+        {
+            Categoria categoria = _context.CategoriaSet.Find(codigo);
+            if (categoria == null)
+                return BadRequest("Categoria não Localizada");
+
+            _context.CategoriaSet.Remove(categoria);
+            _context.SaveChanges();
+
+            return Ok($"Categoria {categoria.Codigo} Removida com Sucesso.");
         }
     }
 }
