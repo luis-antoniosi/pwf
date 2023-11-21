@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z6clI4G/Hc5d5sD5Jeeme7Pgqj9JQ1PQE57OsNx3pkACUGT5KGuW8CDJAiQr0RjcWnKm3YBYeOEh90uR8vfYFQ==",
+  "dgSpecHash": "yo3bD6qlFEiU9I08nsbEiQ9mm5Odpj4tWVWA6IIHujobppBDyEh0Cgee9Nbr0y8Ck8sqFQkpIG0Fl1kOPJJP9g==",
   "success": true,
-  "projectFilePath": "C:\\PW\\PWFilmes\\src\\PWFilmes.Presentation\\PWFilmes.Presentation.csproj",
+  "projectFilePath": "C:\\PWF\\pwf\\src\\PWFilmes.Presentation\\PWFilmes.Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Etec\\.nuget\\packages\\libsassbuilder\\2.0.1\\libsassbuilder.2.0.1.nupkg.sha512",
     "C:\\Users\\Etec\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.17\\microsoft.aspnetcore.authorization.5.0.17.nupkg.sha512",
